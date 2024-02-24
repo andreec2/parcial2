@@ -73,6 +73,19 @@ public class detectorEdadTest {
         Assert.assertEquals(false, result);
     }
 
+    @Test
+    public void menorEdad65() {
+        Person person = new Person("Felipe", 102, 25, MALE, true);
+        boolean result = false;
+        try {
+            result = prueba.registerVoter(person);
+        } catch (detectorEdadExeption e) {
+            fail("fallodatosinvalidos");
+        }
+        Assert.assertEquals(false, result);
+    }
+
+
 
     @Test
     public void menorEdad9() {
